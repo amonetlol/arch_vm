@@ -2,6 +2,12 @@
 
 # comentário aqui
 
+RC='\033[0m'
+RED='\033[31m'
+YELLOW='\033[33m'
+CYAN='\033[36m'
+GREEN='\033[32m'
+
 pre_install(){
     echo 'MAKEFLAGS="-j$(nproc)"' | sudo tee -a /etc/makepkg.conf
 }
@@ -36,6 +42,9 @@ packages="
     ttf-meslo-nerd
     inxi
     nerdfetch
+    gtk-engine-murrine
+    gtk-engines
+    gnome-themes-extra
 "
 
 aur_helper(){    
@@ -100,7 +109,7 @@ vm(){
 }
 
 remove(){
-    sudo pacman -R gnome-music epiphany gnome-maps gnome-weather totem gnome-contacts gnome-calendar gnome-clocks simple-scan gnome-software snapshot
+    sudo pacman -R gnome-music epiphany gnome-maps gnome-weather totem gnome-contacts gnome-calendar gnome-clocks simple-scan gnome-software snapshot --noconfirm
     #gnome-shell-extensions
 }
 
@@ -118,15 +127,21 @@ chaotic(){
     echo "Include = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf
 
     # Atualizar e instalar pacotes do Chaotic-AUR
-    sudo pacman -Syu
+    sudo pacman -Syu --noconfirm
 
     # add temas e icones
     yay -S --needed --noconfirm chaotic-aur/nordzy-icon-theme-git chaotic-aur/dracula-gtk-theme-git chaotic-aur/catppuccin-cursors-mocha chaotic-aur/bibata-cursor-theme chaotic-aur/colloid-cursors-git chaotic-aur/volantes-cursors
 }
 
 bye(){
-    echo "Setup completo"
-    echo "Falta as extensões: App Hider e Dash to Dock"    
+    printf "%b\n" "${YELLOW}Setup completo!!!${RC}"
+    printf "%b\n" "${YELLOW}Falta as extensões: App Hider e Dash to Dock${RC}"
+    printf "%b\n" "${YELLOW}Icone: Nordzy-dark / Cursor: Bibata-Modern-Ice / Shell: Dracula${RC}"
+    printf "%b\n" "${YELLOW}Fontes: Poppins x2 e Meslo NF Mono${RC}"
+    #echo "Setup completo"
+    #echo "Falta as extensões: App Hider e Dash to Dock"
+    #echo "Icone: Nordzy-dark / Cursor: Bibata-Modern-Ice / Shell: Dracula"
+    #echo "Fontes: Poppins x2 e Meslo NF Mono"
 }
 
 # função
