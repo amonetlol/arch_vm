@@ -26,6 +26,9 @@ alias ff='sh ~/Scripts/fsearch'
 alias hg='history | grep'
 alias ag='alias | grep'
 alias j-edit='nv ~/.local/share/autojump/autojump.txt'
+alias inxi='inxi -Fxz'
+alias fv='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs -r nvim'
+alias nf='nerdfetch'
 
 # --- ls --- #
 alias lg="ls | grep"
