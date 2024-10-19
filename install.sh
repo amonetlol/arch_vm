@@ -145,7 +145,7 @@ bye(){
     Caffeine
     Vitals
     Tray Icons: Reloaded
-    Imparience    
+    Impatience    
     
     Aparência:
     Icone: Nordzy-dark
