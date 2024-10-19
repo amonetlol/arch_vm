@@ -99,12 +99,6 @@ vm(){
     sudo systemctl enable --now vmtoolsd
 }
 
-theme(){
-    #yay -S --needed --noconfirm qogir-gtk-theme qogir-icon-theme gtk-engine-murrine gtk-engines gnome-themes-extra
-    yay -S --needed --noconfirm gtk-engine-murrine gtk-engines gnome-themes-extra
-    #gtk-update-icon-cache
-}
-
 remove(){
     sudo pacman -R gnome-music epiphany gnome-maps gnome-weather totem gnome-contacts gnome-calendar gnome-clocks simple-scan gnome-software snapshot
     #gnome-shell-extensions
@@ -112,7 +106,8 @@ remove(){
 
 bye(){
     echo "Setup completo"
-    echo "Falta as extenões: App Hider e Dash to Dock"
+    echo "Falta as extensões: App Hider e Dash to Dock"
+    echo "Falta os temas: temas.sh"
 }
 
 # função
@@ -121,7 +116,6 @@ aur_helper
 install
 config
 vm
-theme
 remove
 update_bash
 bye
