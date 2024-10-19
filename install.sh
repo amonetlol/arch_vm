@@ -130,18 +130,26 @@ chaotic(){
     sudo pacman -Syu --noconfirm
 
     # add temas e icones
-    yay -S --needed --noconfirm chaotic-aur/nordzy-icon-theme-git chaotic-aur/dracula-gtk-theme-git chaotic-aur/catppuccin-cursors-mocha chaotic-aur/bibata-cursor-theme chaotic-aur/colloid-cursors-git chaotic-aur/volantes-cursors
+    yay -S --needed --noconfirm chaotic-aur/nordzy-icon-theme-git chaotic-aur/dracula-gtk-theme-git chaotic-aur/bibata-cursor-theme chaotic-aur/colloid-cursors-git chaotic-aur/volantes-cursors
 }
 
 bye(){
-    printf "%b\n" "${YELLOW}Setup completo!!!${RC}"
-    printf "%b\n" "${YELLOW}Falta as extensões: App Hider e Dash to Dock${RC}"
-    printf "%b\n" "${YELLOW}Icone: Nordzy-dark / Cursor: Bibata-Modern-Ice / Shell: Dracula${RC}"
-    printf "%b\n" "${YELLOW}Fontes: Poppins x2 e Meslo NF Mono${RC}"
-    #echo "Setup completo"
-    #echo "Falta as extensões: App Hider e Dash to Dock"
-    #echo "Icone: Nordzy-dark / Cursor: Bibata-Modern-Ice / Shell: Dracula"
-    #echo "Fontes: Poppins x2 e Meslo NF Mono"
+    printf "\n"
+    printf "%b\n" "${GREEN}Setup completo!!!${RC}" "\n"
+    printf "%b\n" "${CYAN}TODO:${RC}"
+    printf "%b\n" "${YELLOW}
+    Falta as extensões:
+    App Hider
+    Dash to Dock
+    
+    Aparência:
+    Icone: Nordzy-dark
+    Cursor: Bibata-Modern-Ice
+    Shell: Dracula
+
+    Fontes:
+    Interface e documento: Poppins Regular x2
+    Monoespaçado: Meslo NF Mono Regular${RC}"
 }
 
 # função
