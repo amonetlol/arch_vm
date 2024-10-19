@@ -75,7 +75,7 @@ config(){
     ## Scripts
     mkdir -p "${HOME}/Scripts"
     curl -sSLo "${HOME}/Scripts/fsearch" https://github.com/amonetlol/terminal-bash/raw/refs/heads/main/fsearch
-    chmod +x "${HOME}/Scripts/fearch"
+    chmod +x "${HOME}/Scripts/fsearch"
 
     ## Gnome Extensions
     mkdir -p /tmp/temp
