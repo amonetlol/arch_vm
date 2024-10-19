@@ -1,9 +1,10 @@
 #!/bin/sh -e
 
-:'
-#comentários aqui
+# comentário aqui
 
-'
+pre_install(){
+    echo 'MAKEFLAGS="-j$(nproc)"' | sudo tee -a /etc/makepkg.conf
+}
 
 packages="
     fastfetch
@@ -52,17 +53,10 @@ install(){
 config(){
     # fastfetch
     mkdir -p "${HOME}/.config/fastfetch/"
-    curl -sSLo "${HOME}/.config/fastfetch/config.jsonc" https://raw.githubusercontent.com/ChrisTitusTech/mybash/main/config.jsonc
-
-    # starship
-    echo 'eval "$(starship init bash)"' >> ~/.bashrc
-    # setup 1
-    # wget -O ~/.config/starship.toml https://raw.githubusercontent.com/amonetlol/terminal-bash/refs/heads/main/starship.toml
-    # setup 2
-    wget -O ~/.config/starship.toml https://raw.githubusercontent.com/amonetlol/terminal-bash/refs/heads/main/starship-titus.toml
+    curl -sSLo "${HOME}/.config/fastfetch/config.jsonc" https://raw.githubusercontent.com/ChrisTitusTech/mybash/main/config.jsonc   
 
     # set alias
-    curl -sSLo "${HOME}/.aliase.sh" https://github.com/amonetlol/arch/raw/refs/heads/main/aliase.sh
+    curl -sSLo "${HOME}/.aliases.sh" https://github.com/amonetlol/arch/raw/refs/heads/main/aliases.sh
     echo 'source ~/.aliases.sh' >> ~/.bashrc
 
     # set extra
@@ -73,15 +67,15 @@ config(){
     echo "source /usr/share/autojump/autojump.bash" >> ~/.bashrc
 
     ## nvim
-    git clone https://github.com/amonetlol/nvim ~/.config/nvim
-    ### Falta as dependencias
+    git clone https://github.com/amonetlol/nvim ~/.config/nvim    
+    yay -S --needed --noconfirm luarocks tree-sitter-cli xclip nodejs python-pynvim npm
     rm -rf ~/.config/nvim/.git
     rm -rf ~/.config/nvim/.gitignore
 
     ## Scripts
     mkdir -p "${HOME}/Scripts"
     curl -sSLo "${HOME}/Scripts/fsearch" https://github.com/amonetlol/terminal-bash/raw/refs/heads/main/fsearch
-    chmod +x ~/Scripts/fearch
+    chmod +x "${HOME}/Scripts/fearch"
 
     ## Gnome Extensions
     mkdir -p /tmp/temp
@@ -95,6 +89,13 @@ config(){
 
     ## fonts
     fc-cache -vf
+
+    # starship
+    echo 'eval "$(starship init bash)"' >> ~/.bashrc
+    # setup 1
+    # wget -O ~/.config/starship.toml https://raw.githubusercontent.com/amonetlol/terminal-bash/refs/heads/main/starship.toml
+    # setup 2
+    wget -O ~/.config/starship.toml https://raw.githubusercontent.com/amonetlol/terminal-bash/refs/heads/main/starship-titus.toml
 
 }
 
@@ -121,6 +122,7 @@ bye(){
 }
 
 # função
+pre_install
 aur_helper
 install
 config
