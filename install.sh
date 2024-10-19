@@ -34,7 +34,8 @@ packages="
     ttf-poppins
     ttf-roboto
     ttf-meslo-nerd
-
+    inxi
+    nerdfetch
 "
 
 aur_helper(){    
@@ -68,7 +69,7 @@ config(){
 
     ## nvim
     git clone https://github.com/amonetlol/nvim ~/.config/nvim    
-    yay -S --needed --noconfirm luarocks tree-sitter-cli xclip nodejs python-pynvim npm
+    yay -S --needed --noconfirm luarocks tree-sitter-cli xclip nodejs python-pynvim npm wl-clipboard
     rm -rf ~/.config/nvim/.git
     rm -rf ~/.config/nvim/.gitignore
 
@@ -94,16 +95,18 @@ update_bash(){
 }
 
 vm(){
-    yay -S --needed --noconfirm open-vm-tools fuse2 gtkmn3
+    yay -S --needed --noconfirm open-vm-tools fuse2 gtkmm3
     sudo systemctl enable --now vmtoolsd
 }
 
 theme(){
-    yay -S --needed --noconfirm qogir-gtk-theme qogir-icon-theme
+    #yay -S --needed --noconfirm qogir-gtk-theme qogir-icon-theme gtk-engine-murrine gtk-engines gnome-themes-extra
+    yay -S --needed --noconfirm gtk-engine-murrine gtk-engines gnome-themes-extra
+    #gtk-update-icon-cache
 }
 
 remove(){
-    sudo pacman -R gnome-music cheese epiphany gnome-maps gnome-weather totem gnome-contacts gnome-calendar gnome-clocks simple-scan gnome-photos gnome-software snapshot
+    sudo pacman -R gnome-music epiphany gnome-maps gnome-weather totem gnome-contacts gnome-calendar gnome-clocks simple-scan gnome-software snapshot
     #gnome-shell-extensions
 }
 
