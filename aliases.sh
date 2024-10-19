@@ -4,6 +4,7 @@ alias mkdir='mkdir -p'
 alias ping='ping -c 10'
 alias exe='chmod +x'
 alias ft='fastfetch'
+alias grep='grep -i'
 
 alias al='nvim ~/.bashrc'
 alias .r='source ~/.bashrc'
@@ -24,6 +25,7 @@ alias duf='duf -hide special'
 alias ff='sh ~/Scripts/fsearch'
 alias hg='history | grep'
 alias ag='alias | grep'
+alias j-edit='nv ~/.local/share/autojump/autojump.txt'
 
 # --- ls --- #
 alias lg="ls | grep"
