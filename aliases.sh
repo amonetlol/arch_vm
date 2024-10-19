@@ -6,7 +6,7 @@ alias exe='chmod +x'
 alias ft='fastfetch'
 alias grep='grep -i'
 
-alias al='nvim ~/.bashrc'
+alias al='nvim ~/.bashrc ~/.aliases.sh'
 alias .r='source ~/.bashrc'
 alias up2='yay -Syyu --noconfirm'
 alias yay='yay --noconfirm'
