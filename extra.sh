@@ -47,6 +47,7 @@ extract() {
 			*.rar) rar x $archive ;;
 			*.gz) gunzip $archive ;;
 			*.tar) tar xvf $archive ;;
+   			*.gz) tar xvf $archive ;;
 			*.tbz2) tar xvjf $archive ;;
 			*.tgz) tar xvzf $archive ;;
 			*.zip) unzip $archive ;;
