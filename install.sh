@@ -77,16 +77,6 @@ config(){
     curl -sSLo "${HOME}/Scripts/fsearch" https://github.com/amonetlol/terminal-bash/raw/refs/heads/main/fsearch
     chmod +x "${HOME}/Scripts/fsearch"
 
-    ## Gnome Extensions
-    mkdir -p /tmp/temp
-    wget https://extensions.gnome.org/extension-data/app-hider@gnome-extensions.org -O /tmp/temp/app-hider@gnome-extensions.org
-    wget https://extensions.gnome.org/extension-data/dash-to-dock@gnome-extensions.org -O /tmp/temp/dash-to-dock@gnome-extensions.org
-    gnome-extensions install /tmp/temp/app-hider@gnome-extensions.org
-    gnome-extensions install /tmp/temp/dash-to-dock@gnome-extensions.org
-    gnome-extensions enable app-hider@gnome-extensions.org
-    gnome-extensions enable dash-to-dock@gnome-extensions.org
-    rm -rf /tmp/temp
-
     ## fonts
     fc-cache -vf
 
@@ -119,6 +109,7 @@ remove(){
 
 bye(){
     echo "Setup completo"
+    echo "Falta as extenões: App Hider e Dash to Dock"
 }
 
 # função
