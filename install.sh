@@ -45,6 +45,7 @@ packages="
     gtk-engine-murrine
     gtk-engines
     gnome-themes-extra
+    bat
 "
 
 aur_helper(){    
@@ -141,6 +142,8 @@ bye(){
     Falta as extensões:
     App Hider
     Dash to Dock
+    Caffeine
+    Vitals    
     
     Aparência:
     Icone: Nordzy-dark
