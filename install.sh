@@ -138,8 +138,8 @@ bye(){
     printf "\n"
     printf "%b\n" "${GREEN}Setup completo!!!${RC}" "\n"
     printf "%b\n" "${CYAN}TODO:${RC}"
-    printf "%b\n" "${YELLOW}
-    Falta as extensões:
+    printf "${RED}
+    Falta as extensões:${YELLOW}
     App Hider
     Dash to Dock
     Caffeine
@@ -147,12 +147,12 @@ bye(){
     Tray Icons: Reloaded
     Impatience    
     
-    Aparência:
+    ${RED}Aparência:${YELLOW}
     Icone: Nordzy-dark
     Cursor: Bibata-Modern-Ice
     Shell: Dracula
 
-    Fontes:
+    ${RED}Fontes:${YELLOW}
     Interface e documento: Poppins Regular x2
     Monoespaçado: Meslo NF Mono Regular${RC}"
 }
