@@ -143,7 +143,9 @@ bye(){
     App Hider
     Dash to Dock
     Caffeine
-    Vitals    
+    Vitals
+    Tray Icons: Reloaded
+    Imparience    
     
     Aparência:
     Icone: Nordzy-dark
