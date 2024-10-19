@@ -104,10 +104,29 @@ remove(){
     #gnome-shell-extensions
 }
 
+chaotic(){
+    # Adicionar a chave do repositório
+    sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+    sudo pacman-key --lsign-key 3056513887B78AEB
+
+    # Adicionar a lista de mirrors do Chaotic-AUR
+    sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+    sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+    # Adicionar o repositório Chaotic-AUR ao pacman.conf
+    echo "[chaotic-aur]" | sudo tee -a /etc/pacman.conf
+    echo "Include = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf
+
+    # Atualizar e instalar pacotes do Chaotic-AUR
+    sudo pacman -Syu
+
+    # add temas e icones
+    yay -S --needed --noconfirm chaotic-aur/nordzy-icon-theme-git chaotic-aur/dracula-gtk-theme-git chaotic-aur/catppuccin-cursors-mocha chaotic-aur/bibata-cursor-theme chaotic-aur/colloid-cursors-git chaotic-aur/volantes-cursors
+}
+
 bye(){
     echo "Setup completo"
-    echo "Falta as extensões: App Hider e Dash to Dock"
-    echo "Falta os temas: temas.sh"
+    echo "Falta as extensões: App Hider e Dash to Dock"    
 }
 
 # função
@@ -118,4 +137,5 @@ config
 vm
 remove
 update_bash
+chaotic
 bye
