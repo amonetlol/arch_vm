@@ -50,7 +50,7 @@ packages="
 
 aur_helper(){    
     if [ ! -d "$HOME/.src" ]; then
-        mkdir -p "$HOME/.src"        
+        mkdir -p "$HOME/.src" && cd "$HOME/.src" && git clone https://aur.archlinux.org/yay-bin && cd yay-bin && makepkg --noconfirm -si        
     else
         cd "$HOME/.src" && git clone https://aur.archlinux.org/yay-bin && cd yay-bin && makepkg --noconfirm -si
     fi  
