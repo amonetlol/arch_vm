@@ -12,6 +12,8 @@ pre_install(){
     echo 'MAKEFLAGS="-j$(nproc)"' | sudo tee -a /etc/makepkg.conf
 }
 
+# ptyxis
+
 packages="
     fastfetch
     curl 
