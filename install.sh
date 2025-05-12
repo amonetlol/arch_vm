@@ -42,6 +42,7 @@ packages="
     ttf-poppins
     ttf-roboto
     ttf-meslo-nerd
+    ttf-ubuntu-font-family
     inxi
     nerdfetch
     gtk-engine-murrine
@@ -80,8 +81,9 @@ config(){
     echo "source /usr/share/autojump/autojump.bash" >> ~/.bashrc
 
     ## nvim
-    git clone https://github.com/amonetlol/nvim ~/.config/nvim    
-    yay -S --needed --noconfirm luarocks tree-sitter-cli xclip nodejs python-pynvim npm wl-clipboard
+    # git clone https://github.com/amonetlol/nvim ~/.config/nvim
+    git clone https://github.com/amonetlol/neovim-kickstart-config.git ~/.config/nvim
+    yay -S --needed --noconfirm luarocks tree-sitter-cli xclip nodejs python-pynvim npm wl-clipboard ruff python-pip terraform
     rm -rf ~/.config/nvim/.git
     rm -rf ~/.config/nvim/.gitignore
 
