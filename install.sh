@@ -114,7 +114,7 @@ vm(){
 }
 
 remove(){
-    sudo pacman -R gnome-music epiphany gnome-maps gnome-weather totem gnome-contacts gnome-calendar gnome-clocks simple-scan gnome-software snapshot --noconfirm
+    sudo pacman -R gnome-music epiphany gnome-maps gnome-weather totem gnome-contacts gnome-calendar gnome-clocks simple-scan gnome-software snapshot decibels malcontent --noconfirm
     #gnome-shell-extensions
 }
 
@@ -135,7 +135,8 @@ chaotic(){
     sudo pacman -Syu --noconfirm
 
     # add temas e icones
-    yay -S --needed --noconfirm chaotic-aur/nordzy-icon-theme-git chaotic-aur/dracula-gtk-theme-git chaotic-aur/bibata-cursor-theme chaotic-aur/colloid-cursors-git chaotic-aur/volantes-cursors
+    #yay -S --needed --noconfirm chaotic-aur/nordzy-icon-theme-git chaotic-aur/dracula-gtk-theme-git chaotic-aur/bibata-cursor-theme chaotic-aur/colloid-cursors-git chaotic-aur/volantes-cursors
+    yay -S --needed --noconfirm jasper-gtk-theme-git chaotic-aur/nordzy-icon-theme-git chaotic-aur/bibata-cursor-theme
 }
 
 bye(){
@@ -149,7 +150,8 @@ bye(){
     Caffeine
     Vitals
     Tray Icons: Reloaded
-    Impatience    
+    Impatience
+    Blur my Shell
     
     ${RED}Aparência:${YELLOW}
     Icone: Nordzy-dark
