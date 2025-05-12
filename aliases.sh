@@ -39,6 +39,9 @@ alias inxi='inxi -Fxz'
 alias fv='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs -r nvim'
 alias nf='nerdfetch'
 
+## Nvim
+alias nup='nvim --headless -c "Lazy update" -c "qa"'
+
 # --- ls --- #
 alias lg="ls | grep"
 alias ls='exa -lah --color=always --group-directories-first --icons'
