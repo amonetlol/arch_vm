@@ -11,6 +11,8 @@ theme_2(){
 }
 
 # mcmuse-circle-git
+# https://github.com/yeyushengfan258/Reversal-gtk-theme
+# https://github.com/yeyushengfan258/McMuse-icon-theme
 
 theme_1
 theme_2
