@@ -10,7 +10,7 @@ theme_2(){
     yay -S --needed --noconfirm catppuccin-gtk-theme-mocha mcmojave-circle-icon-theme-git catppuccin-cursors-mocha gtk-engine-murrine gtk-engines gnome-themes-extra    
 }
 
-# mcmuse-icon-theme-git
+# mcmuse-circle-git
 
 theme_1
 theme_2
