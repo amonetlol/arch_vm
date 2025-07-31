@@ -28,7 +28,7 @@ packages="
     htop
     google-chrome
     firefox
-    exa
+    eza
     duf
     tldr
     reflector
