@@ -44,17 +44,17 @@ alias nup='nvim --headless -c "Lazy update" -c "qa"'
 
 # --- ls --- #
 alias lg="ls | grep"
-alias ls='exa -lah --color=always --group-directories-first --icons'
-alias ll='exa -lah --color=always --group-directories-first --icons'
-alias lr='exa -R --color=always --icons --oneline'
-alias lrv1='exa -R --color=always --icons --oneline --level=1'
-alias lrv2='exa -R --color=always --icons --oneline --level=2'
-alias ld='exa -lah --color=always --group-directories-first --icons --sort mod' # sort by date/time
-alias tree='exa --tree --icons --group-directories-first'
+alias ls='eza -lah --color=always --group-directories-first --icons'
+alias ll='eza -lah --color=always --group-directories-first --icons'
+alias lr='eza -R --color=always --icons --oneline'
+alias lrv1='eza -R --color=always --icons --oneline --level=1'
+alias lrv2='eza -R --color=always --icons --oneline --level=2'
+alias ld='eza -lah --color=always --group-directories-first --icons --sort mod' # sort by date/time
+alias tree='eza --tree --icons --group-directories-first'
 #alias lt="command ls -l | awk 'NR>1 {print $9}'"
 lt() {
   command ls -l | awk 'NR>1 {print $9}'
-  #command exa -l --color=always --group-directories-first --icons | awk '{print $7, $8, $9}'
+  #command eza -l --color=always --group-directories-first --icons | awk '{print $7, $8, $9}'
 }
 
 alias tx='gnome-text-editor'
