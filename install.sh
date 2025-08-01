@@ -108,6 +108,7 @@ config(){
     # wget -O ~/.config/starship.toml https://raw.githubusercontent.com/amonetlol/terminal-bash/refs/heads/main/starship-titus.toml
     # setup 3
     wget -O ~/.config/starship.toml https://raw.githubusercontent.com/amonetlol/terminal-bash/refs/heads/main/starship-arch-os.toml
+    # sudo cp ~/.config/starship.toml /root/.config/starship.toml
 
 }
 
