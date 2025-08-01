@@ -67,7 +67,9 @@ install(){
 config(){
     # fastfetch
     mkdir -p "${HOME}/.config/fastfetch/"
-    curl -sSLo "${HOME}/.config/fastfetch/config.jsonc" https://raw.githubusercontent.com/ChrisTitusTech/mybash/main/config.jsonc
+    # curl -sSLo "${HOME}/.config/fastfetch/config.jsonc" https://raw.githubusercontent.com/ChrisTitusTech/mybash/main/config.jsonc
+    curl -sSLo "${HOME}/.config/fastfetch/config.jsonc" https://raw.githubusercontent.com/amonetlol/arch_vm/refs/heads/main/fastfetch_ChrisTitus-config.jsonc
+    # curl -sSLo "${HOME}/.config/fastfetch/config.jsonc" https://raw.githubusercontent.com/amonetlol/arch_vm/refs/heads/main/fastfetch_config.jsonc
     sudo pacman -S ttf-cousine-nerd --noconfirm
 
     # set alias
