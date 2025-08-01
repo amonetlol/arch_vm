@@ -3,7 +3,7 @@ alias mv='mv -i'
 alias mkdir='mkdir -p'
 alias ping='ping -c 10'
 alias exe='chmod +x'
-alias ft='fastfetch'
+alias ft='fastfetch --logo small'
 alias grep='grep -i'
 alias jrnctl='journalctl -p 3 -xb'
 alias off='poweroff'
@@ -14,6 +14,7 @@ alias tping='ping -c4 google.com'
 alias kill='kill -9'
 alias killall='killall -9'
 alias free-mem="sudo sh -c 'echo 1 >  /proc/sys/vm/drop_caches' && sudo sh -c 'echo 3 >  /proc/sys/vm/drop_caches'"
+alias logs="systemctl --failed; echo; journalctl -p 3 -b"
 
 alias al='nvim ~/.bashrc ~/.aliases.sh'
 alias .r='source ~/.bashrc'
