@@ -88,7 +88,7 @@ config(){
     # git clone https://github.com/amonetlol/neovim-kickstart-config.git ~/.config/nvim
     # yay -S --needed --noconfirm fd ripgrep lua51 luarocks tree-sitter-cli xclip nodejs python-pynvim npm wl-clipboard ruff python-pip terraform
     git clone https://github.com/amonetlol/nvim_gruvbox.git  ~/.config/nvim
-    yay -S --needed --noconfirm fd ripgrep lua51 luarocks tree-sitter-cli xclip nodejs python-pynvim npm wl-clipboard python-pip lazygit fzf
+    yay -S --needed --noconfirm fd ripgrep lua51 luarocks tree-sitter-cli xclip nodejs python-pynvim npm wl-clipboard python-pip lazygit fzf lua51-jsregexp
     rm -rf ~/.config/nvim/.git
     rm -rf ~/.config/nvim/.gitignore
 
