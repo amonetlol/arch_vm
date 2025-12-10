@@ -7,7 +7,7 @@ alias ft='fastfetch --logo small'
 alias grep='grep -i'
 alias jrnctl='journalctl -p 3 -xb'
 alias off='poweroff'
-alias weather='curl http://wttr.in'
+alias weather='curl -s wttr.in/Ubatuba?0'
 alias tempo='curl -s https://wttr.in/Ubatuba\?format\="%t\n" | head -n 3'
 alias cat='bat'
 alias tping='ping -c4 google.com'
@@ -30,6 +30,7 @@ alias orf='sudo pacman -Qtdq | sudo pacman -Rns -'
 alias cls='sudo pacman -Scc && yay -Sc'
 alias man='tldr'
 alias nv='nvim'
+alias v='nvim'
 alias df='duf -hide special'
 alias duf='duf -hide special'
 alias ff='sh ~/Scripts/fsearch'
@@ -62,3 +63,7 @@ alias tx='gnome-text-editor'
 
 # cd into the old directory
 alias bd='cd "$OLDPWD"'
+
+# Qtile
+alias qre='qtile cmd-obj -o cmd -f restart'
+alias qd='cd ~/.config/qtile
