@@ -66,4 +66,4 @@ alias bd='cd "$OLDPWD"'
 
 # Qtile
 alias qre='qtile cmd-obj -o cmd -f restart'
-alias qd='cd ~/.config/qtile'
+alias qd='cd ~/.config/qtile && ll'
