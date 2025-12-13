@@ -7,7 +7,7 @@ alias ft='fastfetch --logo small'
 alias grep='grep -i'
 alias jrnctl='journalctl -p 3 -xb'
 alias off='poweroff'
-alias weather='curl -s wttr.in/Ubatuba?0'
+alias weather="curl -s 'wttr.in/Ubatuba?0&lang=pt-br'"
 alias tempo='curl -s https://wttr.in/Ubatuba\?format\="%t\n" | head -n 3'
 alias cat='bat'
 alias tping='ping -c4 google.com'
