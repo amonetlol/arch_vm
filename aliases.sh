@@ -15,7 +15,8 @@ alias kill='kill -9'
 alias killall='killall -9'
 alias free-mem="sudo sh -c 'echo 1 >  /proc/sys/vm/drop_caches' && sudo sh -c 'echo 3 >  /proc/sys/vm/drop_caches'"
 alias logs="systemctl --failed; echo; journalctl -p 3 -b"
-alias gfont='kitty +list-fonts | grep'
+alias gfont2='kitty +list-fonts | grep'
+alias gfont='fc-list -f "%{family}\n" | grep -i '
 
 alias al='nvim ~/.bashrc ~/.aliases.sh'
 alias .r='source ~/.bashrc'
